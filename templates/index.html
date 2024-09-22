@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Prédiction de la Maladie Cardiaque</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    
+<body>
+    <div class="container">
+        <h1>Prédiction de la Maladie Cardiaque sur 10 Ans</h1>
+        <form action="/predict" method="POST">
+            <label for="male">Sexe (0 pour Femme  ou 1 pour Homme) :</label>
+            <input type="number" name="male" required><br>
+            
+            <label for="age">Âge :</label>
+            <input type="number" name="age" required><br>
+            
+            <label for="education">Éducation :</label>
+            <input type="number" step="any" name="education"><br>
+            
+            <label for="currentSmoker">Fumeur actuel (0:non ou 1:oui) :</label>
+            <input type="number" name="currentSmoker" required><br>
+            
+            <label for="cigsPerDay">Cigarettes par jour :</label>
+            <input type="number" step="any" name="cigsPerDay"><br>
+            
+            <label for="BPMeds">Médicaments pour la pression artérielle (0:non ou 1: oui) :</label>
+            <input type="number" step="any" name="BPMeds"><br>
+            
+            <label for="prevalentStroke">AVC prévalent (0:non ou 1:oui) :</label>
+            <input type="number" name="prevalentStroke" required><br>
+            
+            <label for="prevalentHyp">Hypertension prévalente (0:non ou 1:oui) :</label>
+            <input type="number" name="prevalentHyp" required><br>
+            
+            <label for="diabetes">Diabète (0:non ou 1:oui) :</label>
+            <input type="number" name="diabetes" required><br>
+            
+            <label for="totChol">Cholestérol total :</label>
+            <input type="number" step="any" name="totChol"><br>
+            
+            <label for="sysBP">Pression systolique :</label>
+            <input type="number" step="any" name="sysBP"><br>
+            
+            <label for="diaBP">Pression diastolique :</label>
+            <input type="number" step="any" name="diaBP"><br>
+            
+            <label for="BMI">IMC :</label>
+            <input type="number" step="any" name="BMI"><br>
+            
+            <label for="heartRate">Fréquence cardiaque :</label>
+            <input type="number" step="any" name="heartRate"><br>
+            
+            <label for="glucose">Glucose :</label>
+            <input type="number" step="any" name="glucose"><br>
+            
+            <input type="submit" value="Prédire">
+        </form>
+    </div>
+</body>
+</html>
